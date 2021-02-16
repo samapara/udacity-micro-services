@@ -18,7 +18,9 @@ jobs:
             name: Install Dependencies
         
       - run:
-          command: make lint
+          command: |
+            . venv/bin/activate
+            make lint
           name: Run lint
 
 workflows:
